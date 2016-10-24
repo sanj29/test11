@@ -15,7 +15,7 @@ public class Autobound {
 	}
 	
 	public void constrainParameters1(WebDataBinder dataBinder) {
-	    //dataBinder.setAllowedParameters( myStringArray );
+		dataBinder.setDisallowedFields( myStringArray );
 	    dataBinder.setAllowedFields(myStringArray);
 	    //dataBinder.set
 	}
