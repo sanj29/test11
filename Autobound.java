@@ -6,10 +6,17 @@ import org.springframework.web.bind.annotation.InitBinder;
 
 public class Autobound {
 
-	String[] myStringArray = new String[]{"a","b","c"};
+	private static final String[] myStringArray = new String[]{"a","b","c"};
 	@InitBinder
 	public void constrainParameters(WebDataBinder dataBinder) {
 	    //dataBinder.setAllowedParameters( myStringArray );
 	    dataBinder.setAllowedFields(myStringArray);
+	    //dataBinder.set
+	}
+	
+	public void constrainParameters1(WebDataBinder dataBinder) {
+	    //dataBinder.setAllowedParameters( myStringArray );
+	    dataBinder.setAllowedFields(myStringArray);
+	    //dataBinder.set
 	}
 }
