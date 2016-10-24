@@ -9,7 +9,7 @@ public class Autobound {
 	private static final String[] myStringArray = new String[]{"a","b","c"};
 	@InitBinder
 	public void constrainParameters(WebDataBinder dataBinder) {
-	    //dataBinder.setAllowedParameters( myStringArray );
+	    dataBinder.setDisallowedFields( myStringArray );
 	    dataBinder.setAllowedFields(myStringArray);
 	    //dataBinder.set
 	}
